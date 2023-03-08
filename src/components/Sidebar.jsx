@@ -1,11 +1,12 @@
 import logo from "img/logo.svg";
 import Menu from "components/Sidebar/Menu";
 import Playlists from "components/Sidebar/Playlists";
+import DownloadApp from "components/Sidebar/DownloadApp";
 import { Icon } from "Icons";
 
 function Sidebar() {
   return (
-    <div className="w-60 py-6 flex flex-col">
+    <div className="w-60 pt-6 flex flex-col">
       <a href="https://open.spotify.com/" className="mb-7 px-6">
         <img src={logo} alt="Spotify" className="h-10" />
       </a>
@@ -37,6 +38,7 @@ function Sidebar() {
         </ul>
       </nav>
       <Playlists />
+      <DownloadApp />
     </div>
   );
 }

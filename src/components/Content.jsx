@@ -1,5 +1,11 @@
+import Navbar from "./Navbar";
+
 function Content() {
-  return <div>Content</div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
 export default Content;

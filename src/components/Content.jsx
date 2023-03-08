@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 
 function Content() {
   return (
-    <div>
+    <div className="flex flex-auto">
       <Navbar />
     </div>
   );

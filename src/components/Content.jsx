@@ -6,14 +6,16 @@ import Collection from "components/views/Collection";
 
 function Content() {
   return (
-    <div className="flex flex-auto">
+    <main className="flex-auto overflow-auto">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/collection" element={<Collection />} />
-      </Routes>
-    </div>
+      <div className="px-8 pt-5">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/collection" element={<Collection />} />
+        </Routes>
+      </div>
+    </main>
   );
 }
 

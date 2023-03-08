@@ -1,5 +1,13 @@
+import logo from "img/logo.svg";
+import Menu from "components/Sidebar/Menu";
+
 function Sidebar() {
-  return <div className="w-60">Sidebar</div>;
+  return (
+    <div className="w-60 py-6">
+      <img src={logo} alt="Spotify" className="h-10" />
+      <Menu />
+    </div>
+  );
 }
 
 export default Sidebar;

@@ -5,7 +5,7 @@ import BottomBar from "components/BottomBar";
 function App() {
   return (
     <>
-      <div>
+      <div className="container">
         <Sidebar />
         <Content />
       </div>

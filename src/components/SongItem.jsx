@@ -5,7 +5,7 @@ import { setCurrent } from "stores/player";
 
 function SongItem({ item }) {
   const dispatch = useDispatch();
-  const { current } = useSelector((state) => state.player);
+  const { current, playing, controls } = useSelector((state) => state.player);
 
   const imageStyle = (item) => {
     switch (item.type) {
@@ -21,8 +21,18 @@ function SongItem({ item }) {
   };
 
   const updateCurrent = () => {
-    dispatch(setCurrent(item));
+    if (current.id === item.id) {
+      if (playing) {
+        controls.pause();
+      } else {
+        controls.play();
+      }
+    } else {
+      dispatch(setCurrent(item));
+    }
   };
+
+  const isCurrentItem = current?.id === item.id && playing;
 
   return (
     <NavLink
@@ -40,9 +50,11 @@ function SongItem({ item }) {
         />
         <button
           onClick={updateCurrent}
-          className="hidden w-10 h-10 rounded-full bg-primary absolute bottom-2 right-2 group-hover:flex group-focus:flex items-center justify-center"
+          className={`${
+            !isCurrentItem ? "hidden" : "flex"
+          } w-10 h-10 rounded-full bg-primary absolute bottom-2 right-2 group-hover:flex group-focus:flex items-center justify-center`}
         >
-          <Icon name={current?.id === item.id ? "pause" : "play"} size={16} />
+          <Icon name={isCurrentItem ? "pause" : "play"} size={16} />
         </button>
       </div>
       <h6 className="overflow-hidden overflow-ellipsis whitespace-nowrap text-base font-semibold">

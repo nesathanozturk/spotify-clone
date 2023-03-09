@@ -3,8 +3,12 @@ import Menu from "components/Sidebar/Menu";
 import Playlists from "components/Sidebar/Playlists";
 import DownloadApp from "components/Sidebar/DownloadApp";
 import { Icon } from "Icons";
+import { useSelector } from "react-redux";
+import SidebarCover from "./Sidebar/SidebarCover";
 
 function Sidebar() {
+  const sidebar = useSelector((state) => state.player.sidebar);
+
   return (
     <div className="w-60 pt-6 flex flex-shrink-0 flex-col">
       <a href="https://open.spotify.com/" className="mb-7 px-6">
@@ -39,6 +43,7 @@ function Sidebar() {
       </nav>
       <Playlists />
       <DownloadApp />
+      {sidebar && <SidebarCover />}
     </div>
   );
 }

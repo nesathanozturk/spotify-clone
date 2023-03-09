@@ -1,5 +1,5 @@
 function Collection() {
-  return <div></div>;
+  return <div>Kitaplığın</div>;
 }
 
 export default Collection;

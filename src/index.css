@@ -25,6 +25,10 @@
     @apply w-6 h-6 flex items-center justify-center mr-4 rounded-sm;
   }
 
+  .search-button {
+    @apply w-12 absolute hover:scale-[1.06] z-10 top-1/2 -translate-y-1/2 h-12 rounded-full bg-white text-black flex items-center justify-center;
+  }
+
   .scrollable {
     scroll-behavior: smooth;
   }

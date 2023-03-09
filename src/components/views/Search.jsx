@@ -46,7 +46,7 @@ function Search() {
         <div className="relative">
           {prev && (
             <button
-              className="absolute -left-6 z-10 top-1/2 hover:scale-[1.06] -translate-y-1/2 w-12 h-12 rounded-full bg-white text-black flex justify-center items-center"
+              className="search-button -left-6"
               onClick={slideFavoritesPrev}
             >
               <Icon name="prev" size={24} />
@@ -54,22 +54,23 @@ function Search() {
           )}
           {next && (
             <button
+              className="search-button -right-6"
               onClick={slideFavoritesNext}
-              className="absolute -right-6 z-10 top-1/2 hover:scale-[1.06] -translate-y-1/2 w-12 h-12 rounded-full bg-white text-black flex justify-center items-center"
             >
               <Icon name="next" size={24} />
             </button>
           )}
+          <ScrollContainer
+            innerRef={favoritesRef}
+            className="flex scrollable overflow-x gap-x-6"
+          >
+            {favoriteCategories.map((category, index) => (
+              <WideCategory key={index} category={category} />
+            ))}
+          </ScrollContainer>
         </div>
-        <ScrollContainer
-          innerRef={favoritesRef}
-          className="flex overflow-x gap-x-6 scrollable"
-        >
-          {favoriteCategories.map((category, index) => (
-            <WideCategory key={index} category={category} />
-          ))}
-        </ScrollContainer>
       </section>
+
       <section>
         <Title title="Hepsine göz at" />
         <div className="grid grid-cols-5 gap-6">

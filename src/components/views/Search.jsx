@@ -1,6 +1,7 @@
 import categories from "data/categories";
 import favoriteCategories from "data/favorite-categories";
 import Title from "components/Title";
+import ScrollContainer from "react-indiana-drag-scroll";
 
 function Category({ category }) {
   return (

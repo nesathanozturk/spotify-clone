@@ -6,7 +6,7 @@ import { Icon } from "Icons";
 
 function Sidebar() {
   return (
-    <div className="w-60 pt-6 flex flex-col">
+    <div className="w-60 pt-6 flex flex-shrink-0 flex-col">
       <a href="https://open.spotify.com/" className="mb-7 px-6">
         <img src={logo} alt="Spotify" className="h-10" />
       </a>
@@ -29,7 +29,7 @@ function Sidebar() {
               href="#"
               className="py-2 px-6 flex items-center group text-sm text-link font-semibold hover:text-white"
             >
-              <span className="w-6 h-6 flex items-center justify-center mr-4 opacity-70 bg-gradient-to-br from-purple-700 to-blue-300 text-white rounded-sm group-hover:bg-opacity-100">
+              <span className="w-6 h-6 flex items-center justify-center mr-4 bg-gradient-to-br from-purple-700 text-white rounded-sm to-blue-300 opacity-70 group-hover:opacity-100">
                 <Icon name="heart" size={12} />
               </span>
               Beğenilen Şarkılar

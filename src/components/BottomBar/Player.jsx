@@ -5,20 +5,20 @@ import CustomRange from "../CustomRange";
 import { useEffect, useMemo, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setControls, setPlaying, setSidebar } from "stores/player";
-import FullScreenPlayer from "components/FullScreenPlayer";
+import FullScreenPlayer from "../FullScreenPlayer";
 
 function Player() {
+  const fsRef = useRef();
+  const [show, toggle] = useToggle(false);
+  const isFullscreen = useFullscreen(fsRef, show, {
+    onClose: () => toggle(false),
+  });
+
   const dispatch = useDispatch();
   const { current, sidebar } = useSelector((state) => state.player);
 
   const [audio, state, controls, ref] = useAudio({
     src: current?.src,
-  });
-
-  const fsRef = useRef();
-  const [show, toggle] = useToggle(false);
-  const isFullscreen = useFullscreen(fsRef, show, {
-    onClose: () => toggle(false),
   });
 
   useEffect(() => {

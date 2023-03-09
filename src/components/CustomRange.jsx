@@ -1,4 +1,4 @@
-import { Range, getTrackBackground } from "react-range";
+import { getTrackBackground, Range } from "react-range";
 
 function CustomRange({ value, step, min, max, onChange }) {
   return (
@@ -17,7 +17,7 @@ function CustomRange({ value, step, min, max, onChange }) {
         >
           <div
             ref={props.ref}
-            className="h-1 w-full rounded-md selft-center"
+            className="h-1 w-full rounded-md self-center"
             style={{
               background: getTrackBackground({
                 values: [value],
@@ -39,7 +39,7 @@ function CustomRange({ value, step, min, max, onChange }) {
           } group-hover:opacity-100`}
           style={{
             ...props.style,
-            boxShadow: "0px 2px 4px 0 rgb(0 0 0 / 50%)",
+            boxShadow: "0 2px 4px 0 rgb(0 0 0 / 50%)",
           }}
         />
       )}

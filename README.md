@@ -5,6 +5,7 @@
 ## 🧰 Technologies Used
 
 - React JS
+- Redux Toolkit
 - React Router
 - Tailwind for styles
 - Player for react-use

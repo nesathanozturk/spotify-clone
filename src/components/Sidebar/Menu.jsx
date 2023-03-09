@@ -9,9 +9,7 @@ function Menu() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive
-                ? "bg-active text-white h-10 flex gap-x-4 items-center text-sm font-semibold hover:text-white px-4 rounded"
-                : "h-10 flex gap-x-4 items-center text-sm font-semibold text-link hover:text-white px-4 rounded"
+              isActive ? "menu-links-active" : "menu-links-inactive"
             }
           >
             <span>
@@ -24,9 +22,7 @@ function Menu() {
           <NavLink
             to="/search"
             className={({ isActive }) =>
-              isActive
-                ? "bg-active text-white h-10 flex gap-x-4 items-center text-sm font-semibold hover:text-white px-4 rounded"
-                : "h-10 flex gap-x-4 items-center text-sm font-semibold text-link hover:text-white px-4 rounded"
+              isActive ? "menu-links-active" : "menu-links-inactive"
             }
           >
             <span>
@@ -39,9 +35,7 @@ function Menu() {
           <NavLink
             to="/collection"
             className={({ isActive }) =>
-              isActive
-                ? "bg-active text-white h-10 flex gap-x-4 items-center text-sm font-semibold hover:text-white px-4 rounded"
-                : "h-10 flex gap-x-4 items-center text-sm font-semibold text-link hover:text-white px-4 rounded"
+              isActive ? "menu-links-active" : "menu-links-inactive"
             }
           >
             <span>

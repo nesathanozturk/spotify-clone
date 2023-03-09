@@ -29,6 +29,14 @@
     @apply w-12 absolute hover:scale-[1.06] z-10 top-1/2 -translate-y-1/2 h-12 rounded-full bg-white text-black flex items-center justify-center;
   }
 
+  .menu-links-active {
+    @apply bg-active text-white h-10 flex gap-x-4 items-center text-sm font-semibold hover:text-white px-4 rounded;
+  }
+
+  .menu-links-inactive {
+    @apply h-10 flex gap-x-4 items-center text-sm font-semibold text-link hover:text-white px-4 rounded;
+  }
+
   .scrollable {
     scroll-behavior: smooth;
   }

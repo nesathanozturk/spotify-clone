@@ -7,7 +7,7 @@ export default [
   },
   {
     id: 2,
-    title: "Hip hop",
+    title: "Hip-Hop",
     cover: "https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe",
     color: "#ba5d08",
   },
@@ -20,7 +20,7 @@ export default [
   },
   {
     id: 4,
-    title: "Dans ve Elektronik",
+    title: "Dance/Electronic",
     cover: "https://i.scdn.co/image/ab67706f000000027ea4d505212b9de1f72c5112",
     color: "#dc148b",
   },

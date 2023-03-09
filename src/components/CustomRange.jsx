@@ -3,11 +3,11 @@ import { Range, getTrackBackground } from "react-range";
 function CustomRange({ value, step, min, max, onChange }) {
   return (
     <Range
-      values={value}
+      values={[value]}
       step={step}
       min={min}
       max={max}
-      onChange={onChange}
+      onChange={(values) => onChange(values[0])}
       renderTrack={({ props, children }) => (
         <div
           onMouseDown={props.onMouseDown}

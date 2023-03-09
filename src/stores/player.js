@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  current: false,
+  current: false, // -> Oluşturduğumuz objeleri temsil ediyor.
   controls: false,
   playing: false,
 };

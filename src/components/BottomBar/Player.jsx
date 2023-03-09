@@ -10,7 +10,7 @@ function Player() {
     src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
   });
 
-  //  Alttaki iki değer değişeceği için useMemo kullanıyoruz.
+  // Sadece alttaki iki değer değişeceği için useMemo kullanıyoruz.
   const volumeIcon = useMemo(() => {
     if (state.volume === 0 || state.muted) {
       return "volumeMuted";

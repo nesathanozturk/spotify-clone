@@ -1,7 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { Icon } from "Icons";
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrent } from "stores/player";
 
 function SongItem({ item }) {
+  const dispatch = useDispatch();
+  const { current } = useSelector((state) => state.player);
+
   const imageStyle = (item) => {
     switch (item.type) {
       case "artist":
@@ -13,6 +18,10 @@ function SongItem({ item }) {
       default:
         return "rounded";
     }
+  };
+
+  const updateCurrent = () => {
+    dispatch(setCurrent(item));
   };
 
   return (
@@ -29,8 +38,11 @@ function SongItem({ item }) {
             item
           )}`}
         />
-        <button className="hidden w-10 h-10 rounded-full bg-primary absolute bottom-2 right-2 group-hover:flex group-focus:flex items-center justify-center">
-          <Icon name="play" size={16} />
+        <button
+          onClick={updateCurrent}
+          className="hidden w-10 h-10 rounded-full bg-primary absolute bottom-2 right-2 group-hover:flex group-focus:flex items-center justify-center"
+        >
+          <Icon name={current?.id === item.id ? "pause" : "play"} size={16} />
         </button>
       </div>
       <h6 className="overflow-hidden overflow-ellipsis whitespace-nowrap text-base font-semibold">

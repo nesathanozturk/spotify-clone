@@ -13,7 +13,7 @@ function Search() {
         autoFocus={true}
         type="text"
         id="search-input"
-        className="max-w-full w-[22.75rem] pl-12 outline-none text-black h-10 bg-white rounded-3xl placeholder-black/50 text-sm"
+        className="max-w-full w-[22.75rem] pl-12 outline-none text-black h-10 bg-white rounded-3xl placeholder-black/50 text-sm font-medium"
         placeholder="Sanatçılar, şarkılar veya podcast'ler"
       />
     </div>

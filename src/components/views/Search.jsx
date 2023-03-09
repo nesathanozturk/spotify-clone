@@ -13,7 +13,7 @@ function Category({ category }) {
         <img
           src={category.cover}
           alt={category.title}
-          className="w-[6.25rem] h-[6.25rem] rotate-[25deg] translate-x[18%] translate-y-[5%] absolute bottom-0 right-0"
+          className="w-[6.25rem] h-[6.25rem] rotate-[25deg] translate-x[18%] translate-y-[5%] absolute bottom-0 right-0 shadow-spotify"
         />
       </div>
     </div>

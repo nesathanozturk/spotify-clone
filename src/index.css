@@ -41,6 +41,10 @@
     @apply w-8 h-8 flex items-center justify-center rounded-full bg-black bg-opacity-70;
   }
 
+  .player-button {
+    @apply w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100;
+  }
+
   .scrollable {
     scroll-behavior: smooth;
   }

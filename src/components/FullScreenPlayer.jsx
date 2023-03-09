@@ -15,7 +15,7 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
       <div className="absolute opiacty-70 top-8 left-8 gap-x-4 text-white flex items-center">
         <Icon name="logo" size={34} />
         <div className="text-xs">
-          <p>PLAYING FROM PLAYLIST</p>
+          <p className="uppercase">Playing from playlist</p>
           <h6 className="font-semibold mt-0.5 uppercase">{current.title}</h6>
         </div>
       </div>
@@ -52,10 +52,10 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
           </div>
         </div>
         <div className="flex items-center gap-x-5">
-          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="player-button">
             <Icon size={25} name="shuffle" />
           </button>
-          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="player-button">
             <Icon size={25} name="playerPrev" />
           </button>
           <button
@@ -64,17 +64,17 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
           >
             <Icon size={24} name={state?.playing ? "pause" : "play"} />
           </button>
-          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="player-button">
             <Icon size={24} name="playerNext" />
           </button>
-          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="player-button">
             <Icon size={24} name="repeat" />
           </button>
         </div>
         <div className="flex items-center absolute bottom-3 right-6 gap-x-3">
           <button
             onClick={controls[state.muted ? "unmute" : "mute"]}
-            className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
+            className="player-button"
           >
             <Icon size={16} name={volumeIcon} />
           </button>

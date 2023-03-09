@@ -10,7 +10,7 @@ function Navigation() {
         onClick={() => {
           navigate(-1);
         }}
-        className="w-8 h-8 flex items-center justify-center rounded-full bg-black bg-opacity-70"
+        className="navigation-button"
       >
         <Icon name="prev" size={22} />
       </button>
@@ -18,7 +18,7 @@ function Navigation() {
         onClick={() => {
           navigate(+1);
         }}
-        className="w-8 h-8 flex items-center justify-center rounded-full bg-black bg-opacity-70"
+        className="navigation-button"
       >
         <Icon name="next" size={22} />
       </button>

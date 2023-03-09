@@ -3,7 +3,7 @@ import { Icon } from "Icons";
 
 function Auth() {
   const user = {
-    name: "Neşathan Öztürk",
+    name: "nesathanozturk",
     avatar: "https://avatars.githubusercontent.com/u/107864503?v=4",
   };
 
@@ -60,6 +60,18 @@ function Auth() {
               {({ active }) => (
                 <a
                   className={`h-10 flex items-center px-2 text-sm rounded ${
+                    active && "bg-white bg-opacity-20"
+                  }`}
+                  href="/s"
+                >
+                  Settings
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  className={`h-10 flex items-center px-2 text-sm rounded border-t-[1px] border-zinc-700 ${
                     active && "bg-white bg-opacity-20"
                   }`}
                   href="/s"

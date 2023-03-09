@@ -22,7 +22,7 @@ function Sidebar() {
               <span className="sidebar-span bg-white group-hover:bg-opacity-100 bg-opacity-60 text-black">
                 <Icon name="plus" size={12} />
               </span>
-              Çalma Listesi Oluştur
+              Create Playlist
             </a>
           </li>
           <li>
@@ -30,7 +30,7 @@ function Sidebar() {
               <span className="sidebar-span bg-gradient-to-br from-purple-700 text-white to-blue-300 opacity-70 group-hover:opacity-100">
                 <Icon name="heart" size={12} />
               </span>
-              Beğenilen Şarkılar
+              Liked Songs
             </a>
           </li>
         </ul>

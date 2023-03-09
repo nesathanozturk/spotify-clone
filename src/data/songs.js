@@ -39,7 +39,8 @@ export default [
     id: 5,
     title: "This is Lana Del Rey",
     artist: "Lana Del Rey",
-    description: "Original Soundtrack",
+    description:
+      "This is Lana Del Rey. The essential tracks, all in one playlist.",
     image: "https://i.scdn.co/image/ab67706f00000002f430fff70e7bf1ab096d63d5",
     type: "album",
     src: "https://files.gospeljingle.com/uploads/music/2022/09/Lana_Del_Rey_-_Summertime_Sadness.mp3",
@@ -57,7 +58,8 @@ export default [
     id: 7,
     title: "This is The Weeknd",
     artist: "The Weeknd",
-    description: "Original Soundtrack",
+    description:
+      "This is The Weeknd. The essential tracks, all in one playlist.",
     image:
       "https://lh3.googleusercontent.com/ftOvp4CxhpJuXLZmVeTJBklg_dus47Otks4fRirylDy9gI61ae1e-9FapJe72ufT_SbBzO43zaM7rlJGyFTrj7VUakW1FEvT=s640",
     type: "album",

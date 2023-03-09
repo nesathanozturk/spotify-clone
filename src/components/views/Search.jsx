@@ -42,7 +42,7 @@ function Search() {
   return (
     <>
       <section className="mb-8">
-        <Title title="En çok dinlediğin türler" />
+        <Title title="Genres you listen to the most" />
         <div className="relative">
           {prev && (
             <button
@@ -72,7 +72,7 @@ function Search() {
       </section>
 
       <section>
-        <Title title="Hepsine göz at" />
+        <Title title="Browse All" />
         <div className="grid grid-cols-5 gap-6">
           {categories.map((category, index) => (
             <Category key={index} category={category} />

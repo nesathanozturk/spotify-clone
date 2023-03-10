@@ -33,7 +33,7 @@ function MobileBottom() {
         </li>
         <li>
           <NavLink
-            to="/collection"
+            to="/"
             className={({ isActive }) =>
               isActive ? "mobile-bottom-active" : "mobile-bottom-inactive"
             }
@@ -46,7 +46,7 @@ function MobileBottom() {
         </li>
         <li>
           <NavLink
-            to="/collection"
+            to="/"
             className={({ isActive }) =>
               isActive ? "mobile-bottom-active" : "mobile-bottom-inactive"
             }

@@ -2,7 +2,6 @@ import Navbar from "./Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "components/views/Home";
 import Search from "components/views/Search";
-import Collection from "components/views/Collection";
 
 function Content() {
   return (
@@ -12,7 +11,6 @@ function Content() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/collection" element={<Collection />} />
         </Routes>
       </div>
     </main>

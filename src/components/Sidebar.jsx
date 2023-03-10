@@ -11,7 +11,7 @@ function Sidebar() {
 
   return (
     <div className="bg-black w-60 pt-6 hidden flex-shrink-0 flex-col md:flex">
-      <a href="https://open.spotify.com/" className="mb-7 px-6">
+      <a href="/" className="mb-7 px-6">
         <img src={logo} alt="Spotify" className="h-10" />
       </a>
       <Menu />

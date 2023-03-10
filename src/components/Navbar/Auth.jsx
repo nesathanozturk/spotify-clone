@@ -21,7 +21,9 @@ function Auth() {
               alt="Avatar"
               className={"w-8 h-8 rounded-full p-0.5 mr-2"}
             />
-            <span className="text-sm font-semibold mr-2">{user.name}</span>
+            <span className="text-sm font-semibold mr-2 md:hidden lg:inline">
+              {user.name}
+            </span>
             <span className={open && "rotate-180"}>
               <Icon name="downDir" size={16} />
             </span>

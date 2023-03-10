@@ -41,7 +41,7 @@ function Search() {
 
   return (
     <>
-      <section className="mb-8">
+      <section className="mb-8 hidden md:block">
         <Title title="Genres you listen to the most" />
         <div className="relative">
           {prev && (
@@ -73,7 +73,7 @@ function Search() {
 
       <section>
         <Title title="Browse All" />
-        <div className="grid grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {categories.map((category, index) => (
             <Category key={index} category={category} />
           ))}

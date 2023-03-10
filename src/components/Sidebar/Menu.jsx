@@ -33,7 +33,6 @@ function Menu() {
         </li>
         <li>
           <NavLink
-            to="/collection"
             className={({ isActive }) =>
               isActive ? "menu-links-active" : "menu-links-inactive"
             }

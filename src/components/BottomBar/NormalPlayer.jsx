@@ -41,13 +41,13 @@ function NormalPlayer() {
   }, [state.volume, state.muted]);
 
   return (
-    <div className="hidden md:flex px-4 justify-between items-center h-full">
+    <div className="bg-footer mx-1 p-2 md:mx-0 md:p-0 flex px-4 items-center gap-x-28 md:gap-x-0 h-full">
       <div className="min-w-[11.25rem] w-[30%]">
         {current && (
           <div className="flex items-center">
             <div className="flex items-center mr-3">
               {!sidebar && (
-                <div className="w-14 h-14 mr-3 relative group flex-shrink-0">
+                <div className="w-12 h-12 md:w-14 md:h-14 mr-3 relative group flex-shrink-0">
                   <img src={current.image} alt="" />
                   <button
                     onClick={() => dispatch(setSidebar(true))}
@@ -64,22 +64,25 @@ function NormalPlayer() {
                 </p>
               </div>
             </div>
-            <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+            <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
               <Icon size={16} name="heart" />
             </button>
-            <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+            <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
               <Icon size={16} name="pictureInPicture" />
             </button>
           </div>
         )}
       </div>
-      <div className="max-w-[45.125rem] w-[40%] pt-2 flex flex-col px-4 items-center">
+      <div className="w-full md:max-w-[45.125rem] md:w-[40%] pt-2 flex flex-col px-4 items-center">
         <div className="flex items-center gap-x-2">
-          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="shuffle" />
           </button>
-          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="playerPrev" />
+          </button>
+          <button className="flex w-8 h-8 md:hidden items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+            <Icon size={30} name="heart" />
           </button>
           <button
             onClick={controls[state?.playing ? "pause" : "play"]}
@@ -87,14 +90,14 @@ function NormalPlayer() {
           >
             <Icon size={16} name={state?.playing ? "pause" : "play"} />
           </button>
-          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="playerNext" />
           </button>
-          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="repeat" />
           </button>
         </div>
-        <div className="w-full flex items-center mt-1.5 gap-x-2">
+        <div className="hidden w-full md:flex items-center mt-1.5 gap-x-2">
           {audio}
           <div className="text-[0.688rem] text-white text-opacity-70">
             {secondsToTime(state?.time)}
@@ -111,23 +114,23 @@ function NormalPlayer() {
           </div>
         </div>
       </div>
-      <div className="min-w-[11.25rem] w-[30%] flex items-center justify-end">
-        <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+      <div className="hidden min-w-[11.25rem] w-[30%] md:flex items-center justify-end">
+        <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
           <Icon size={16} name="lyrics" />
         </button>
-        <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+        <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
           <Icon size={16} name="queue" />
         </button>
-        <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+        <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
           <Icon size={16} name="device" />
         </button>
         <button
           onClick={controls[state.muted ? "unmute" : "mute"]}
-          className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
+          className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
         >
           <Icon size={16} name={volumeIcon} />
         </button>
-        <div className="w-[5.813rem] max-w-full">
+        <div className="hidden md:block w-[5.813rem] max-w-full">
           <CustomRange
             step={0.01}
             min={0}
@@ -141,7 +144,7 @@ function NormalPlayer() {
         </div>
         <button
           onClick={toggle}
-          className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
+          className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
         >
           <Icon size={16} name="fullScreen" />
         </button>

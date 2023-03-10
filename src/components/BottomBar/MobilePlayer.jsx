@@ -76,33 +76,7 @@ function MobilePlayer() {
           </div>
         </div>
       </div>
-      {/* <button onClick={toggle} className="player-button">
-          <Icon size={16} name="fullScreen" />
-        </button> */}
-      {/* <div ref={fsRef}>
-        {isFullscreen && (
-          <FullScreenPlayer
-            toggle={toggle}
-            state={state}
-            controls={controls}
-            volumeIcon={volumeIcon}
-          />
-        )}
-      </div> */}
       {audio}
-      {/* <div className="text-[0.688rem] text-white text-opacity-70">
-            {secondsToTime(state?.time)}
-          </div> */}
-      {/* <CustomRange
-            step={0.1}
-            min={0}
-            max={state?.duration || 1}
-            value={state?.time}
-            onChange={(value) => controls.seek(value)}
-          /> */}
-      {/* <div className="text-[0.688rem] text-white text-opacity-70">
-            {secondsToTime(state?.duration)}
-          </div> */}
     </div>
   );
 }

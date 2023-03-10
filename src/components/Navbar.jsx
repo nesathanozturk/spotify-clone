@@ -2,6 +2,7 @@ import Navigation from "./Navbar/Navigation";
 import Auth from "./Navbar/Auth";
 import { useMatch } from "react-router-dom";
 import Search from "./Navbar/Search";
+import { TbSettings } from "react-icons/tb";
 
 function Navbar() {
   const searchRoute = useMatch("/search");
@@ -11,6 +12,9 @@ function Navbar() {
       <Navigation />
       {searchRoute && <Search />}
       <Auth />
+      <div className="container flex justify-end md:hidden">
+        <TbSettings size={27} className="mt-4 cursor-pointer" />
+      </div>
     </nav>
   );
 }

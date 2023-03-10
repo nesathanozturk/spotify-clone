@@ -1,6 +1,8 @@
 import Sidebar from "components/Sidebar";
 import Content from "components/Content";
 import BottomBar from "components/BottomBar";
+import MobileBottomBar from "components/MobileBottomBar";
+import MobilePlayer from "components/BottomBar/MobilePlayer";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <Content />
       </div>
       <BottomBar />
+      <MobilePlayer />
+      <MobileBottomBar />
     </>
   );
 }

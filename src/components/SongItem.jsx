@@ -40,7 +40,7 @@ function SongItem({ item }) {
       to="/"
       className={"bg-footer p-4 rounded transition-all hover:bg-active group"}
     >
-      <div className="pt-[100%] relative mb-4">
+      <div className="pt-[100%] px-20 md:px-1 relative mb-4">
         <img
           src={item.image}
           alt={item.title}

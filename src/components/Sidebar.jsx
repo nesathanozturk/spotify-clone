@@ -10,7 +10,7 @@ function Sidebar() {
   const sidebar = useSelector((state) => state.player.sidebar);
 
   return (
-    <div className="bg-black w-60 pt-6 flex flex-shrink-0 flex-col">
+    <div className="bg-black w-60 pt-6 hidden flex-shrink-0 flex-col md:flex">
       <a href="https://open.spotify.com/" className="mb-7 px-6">
         <img src={logo} alt="Spotify" className="h-10" />
       </a>

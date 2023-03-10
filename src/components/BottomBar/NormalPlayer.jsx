@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setControls, setPlaying, setSidebar } from "stores/player";
 import FullScreenPlayer from "../FullScreenPlayer";
 
-function Player() {
+function NormalPlayer() {
   const fsRef = useRef();
   const [show, toggle] = useToggle(false);
   const isFullscreen = useFullscreen(fsRef, show, {
@@ -41,7 +41,7 @@ function Player() {
   }, [state.volume, state.muted]);
 
   return (
-    <div className="flex px-4 justify-between items-center h-full">
+    <div className="hidden md:flex px-4 justify-between items-center h-full">
       <div className="min-w-[11.25rem] w-[30%]">
         {current && (
           <div className="flex items-center">
@@ -64,10 +64,10 @@ function Player() {
                 </p>
               </div>
             </div>
-            <button className="player-button">
+            <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
               <Icon size={16} name="heart" />
             </button>
-            <button className="player-button">
+            <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
               <Icon size={16} name="pictureInPicture" />
             </button>
           </div>
@@ -75,10 +75,10 @@ function Player() {
       </div>
       <div className="max-w-[45.125rem] w-[40%] pt-2 flex flex-col px-4 items-center">
         <div className="flex items-center gap-x-2">
-          <button className="player-button">
+          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="shuffle" />
           </button>
-          <button className="player-button">
+          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="playerPrev" />
           </button>
           <button
@@ -87,10 +87,10 @@ function Player() {
           >
             <Icon size={16} name={state?.playing ? "pause" : "play"} />
           </button>
-          <button className="player-button">
+          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="playerNext" />
           </button>
-          <button className="player-button">
+          <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon size={16} name="repeat" />
           </button>
         </div>
@@ -112,18 +112,18 @@ function Player() {
         </div>
       </div>
       <div className="min-w-[11.25rem] w-[30%] flex items-center justify-end">
-        <button className="player-button">
+        <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
           <Icon size={16} name="lyrics" />
         </button>
-        <button className="player-button">
+        <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
           <Icon size={16} name="queue" />
         </button>
-        <button className="player-button">
+        <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
           <Icon size={16} name="device" />
         </button>
         <button
           onClick={controls[state.muted ? "unmute" : "mute"]}
-          className="player-button"
+          className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
         >
           <Icon size={16} name={volumeIcon} />
         </button>
@@ -139,7 +139,10 @@ function Player() {
             }}
           />
         </div>
-        <button onClick={toggle} className="player-button">
+        <button
+          onClick={toggle}
+          className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
+        >
           <Icon size={16} name="fullScreen" />
         </button>
       </div>
@@ -157,4 +160,4 @@ function Player() {
   );
 }
 
-export default Player;
+export default NormalPlayer;

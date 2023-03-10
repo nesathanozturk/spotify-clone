@@ -5,7 +5,7 @@ function Navigation() {
   const navigate = useNavigate();
 
   return (
-    <nav className="flex items-center gap-x-4">
+    <nav className="hidden md:flex items-center gap-x-4">
       <button
         onClick={() => {
           navigate(-1);

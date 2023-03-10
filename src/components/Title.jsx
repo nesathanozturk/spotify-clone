@@ -4,7 +4,7 @@ function Title({ title, more = false }) {
   return (
     <header className="flex items-center justify-between mb-4">
       <NavLink to={more ?? "#"}>
-        <h3 className="text-2xl text-white font-semibold tracking-tight hover:underline">
+        <h3 className="text-2xl text-white font-semibold tracking-tight md:hover:underline">
           {title}
         </h3>
       </NavLink>
@@ -12,7 +12,7 @@ function Title({ title, more = false }) {
         <NavLink
           to={more}
           className={
-            "text-xs font-semibold text-link hover:underline tracking-wider"
+            "hidden md:block text-xs font-semibold text-link hover:underline tracking-wider"
           }
         >
           Show all

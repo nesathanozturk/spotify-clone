@@ -8,7 +8,7 @@ function Auth() {
   };
 
   return (
-    <Menu as="nav" className={"relative"}>
+    <Menu as="nav" className={"hidden md:block relative"}>
       {({ open }) => (
         <>
           <Menu.Button

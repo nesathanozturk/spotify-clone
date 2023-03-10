@@ -1,3 +1,14 @@
+import fixYou from "./songs/fix-you.mp3";
+import areYouMine from "./songs/r-u-mine.mp3";
+import starboy from "./songs/starboy.mp3";
+import levels from "./songs/levels.mp3";
+import summertimeSadness from "./songs/summertime-sadness.mp3";
+import signOfTheTimes from "./songs/sign-of-the-times.mp3";
+import heaven from "./songs/heaven.mp3";
+import itsTime from "./songs/its-time.mp3";
+import bozdogan from "./songs/bozdogan.mp3";
+import eklemedirKocaKonak from "./songs/eklemedir-koca-konak.mp3";
+
 export default [
   {
     id: 1,
@@ -6,16 +17,16 @@ export default [
     artist: "Coldplay",
     image: "https://i.scdn.co/image/ab6761610000e5eb989ed05e1f0570cc4726c2d3",
     type: "song",
-    src: "https://files.gospeljingle.com/uploads/music/2023/01/Coldplay_-_Fix_You.mp3",
+    src: fixYou,
   },
   {
     id: 2,
-    title: "Peaceful Piano",
-    artist: "Spotify",
-    description: "Relax and indulge with beautiful piano pieces",
-    image: "https://i.scdn.co/image/ab67706f00000002ca5a7517156021292e5663a6",
+    title: "R U Mine?",
+    artist: "Arctic Monkeys",
+    description: "Artist",
+    image: "https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612092_7037-lq.mp3",
+    src: areYouMine,
   },
   {
     id: 3,
@@ -24,16 +35,16 @@ export default [
     description: "Album",
     image: "https://i.scdn.co/image/ab67616d00001e024718e2b124f79258be7bc452",
     type: "album",
-    src: "https://files.gospeljingle.com/uploads/music/2023/01/The_Weeknd_-_Starboy.mp3",
+    src: starboy,
   },
   {
     id: 4,
-    title: "The Nights",
+    title: "Levels",
     artist: "Avicii",
     description: "Avicii",
     image: "https://i.scdn.co/image/ab6761610000e5eb09bf4814c6585e1f69dfeef7",
     type: "song",
-    src: "https://files.gospeljingle.com/uploads/music/2022/12/Avicii_-_The_Nights.mp3",
+    src: levels,
   },
   {
     id: 5,
@@ -43,35 +54,51 @@ export default [
       "This is Lana Del Rey. The essential tracks, all in one playlist.",
     image: "https://i.scdn.co/image/ab67706f00000002f430fff70e7bf1ab096d63d5",
     type: "album",
-    src: "https://files.gospeljingle.com/uploads/music/2022/09/Lana_Del_Rey_-_Summertime_Sadness.mp3",
+    src: summertimeSadness,
   },
   {
     id: 6,
-    title: "As It Was",
+    title: "Sign of the Times",
     artist: "Harry Styles",
     description: "Harry Styles",
     image: "https://i.scdn.co/image/ab6761610000e5ebf7db7c8ede90a019c54590bb",
     type: "song",
-    src: "https://files.gospeljingle.com/uploads/music/2023/01/Harry_Styles_-_As_It_Was.mp3",
+    src: signOfTheTimes,
   },
   {
     id: 7,
-    title: "This is The Weeknd",
-    artist: "The Weeknd",
-    description:
-      "This is The Weeknd. The essential tracks, all in one playlist.",
-    image:
-      "https://lh3.googleusercontent.com/ftOvp4CxhpJuXLZmVeTJBklg_dus47Otks4fRirylDy9gI61ae1e-9FapJe72ufT_SbBzO43zaM7rlJGyFTrj7VUakW1FEvT=s640",
+    title: "This is Avicii",
+    artist: "Avicii",
+    description: "This is Avicii. The essential tracks, all in one playlist.",
+    image: "https://i.scdn.co/image/ab67706f00000002136380a2498089b7ead3122c",
     type: "album",
-    src: "https://files.gospeljingle.com/uploads/music/2022/12/The_Weeknd_-_Blinding_Lights.mp3",
+    src: heaven,
   },
   {
     id: 8,
-    title: "Believer",
+    title: "It's Time",
     artist: "Imagine Dragons",
     description: "Imagine Dragons",
     image: "https://i.scdn.co/image/ab6761610000e5eb920dc1f617550de8388f368e",
     type: "song",
-    src: "https://files.gospeljingle.com/uploads/music/2022/12/Imagine_Dragons_-_Believer.mp3",
+    src: itsTime,
+  },
+  {
+    id: 9,
+    title: "İttihat ve Terakki Türküleri",
+    artist: "Playlist",
+    description: "By Neşathan Öztürk",
+    image: "https://i.scdn.co/image/ab67706c0000da84b406af25380b9b115bc758aa",
+    type: "song",
+    src: bozdogan,
+  },
+  {
+    id: 10,
+    title: "Atatürk'ün Dinlediği Şarkılar",
+    artist: "Playlist",
+    description: "By Neşathan Öztürk",
+    image: "https://i.scdn.co/image/ab67616d0000b27381c1cd030baac481d29ca7a3",
+    type: "song",
+    src: eklemedirKocaKonak,
   },
 ];

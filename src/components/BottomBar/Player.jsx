@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setControls, setPlaying, setSidebar } from "stores/player";
 import FullScreenPlayer from "../FullScreenPlayer";
 
-function NormalPlayer() {
+function Player() {
   const fsRef = useRef();
   const [show, toggle] = useToggle(false);
   const isFullscreen = useFullscreen(fsRef, show, {
@@ -42,9 +42,9 @@ function NormalPlayer() {
 
   return (
     <div className="bg-footer mx-1 p-2 md:mx-0 md:p-0 flex px-4 items-center gap-x-28 md:gap-x-0 h-full">
-      <div className="min-w-[11.25rem] w-[30%]">
+      <div className="w-full md:min-w-[11.25rem] md:w-[30%]">
         {current && (
-          <div className="flex items-center">
+          <div className="flex items-center justify-between md:justify-start">
             <div className="flex items-center mr-3">
               {!sidebar && (
                 <div className="w-12 h-12 md:w-14 md:h-14 mr-3 relative group flex-shrink-0">
@@ -64,36 +64,44 @@ function NormalPlayer() {
                 </p>
               </div>
             </div>
-            <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+            <button className="player-button">
               <Icon size={16} name="heart" />
             </button>
-            <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+            <button className="player-button">
               <Icon size={16} name="pictureInPicture" />
             </button>
+            <div className="flex gap-x-2 md:hidden">
+              <button className="flex w-8 h-8 md:hidden items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+                <Icon size={30} name="heart" />
+              </button>
+              <button
+                onClick={controls[state?.playing ? "pause" : "play"]}
+                className="w-8 h-8 bg-white flex items-center justify-center text-black rounded-full hover:scale-[1.06]"
+              >
+                <Icon size={16} name={state?.playing ? "pause" : "play"} />
+              </button>
+            </div>
           </div>
         )}
       </div>
-      <div className="w-full md:max-w-[45.125rem] md:w-[40%] pt-2 flex flex-col px-4 items-center">
+      <div className="hidden md:max-w-[45.125rem] md:w-[40%] pt-2 md:flex flex-col px-4 items-center">
         <div className="flex items-center gap-x-2">
-          <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="player-button">
             <Icon size={16} name="shuffle" />
           </button>
-          <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="player-button">
             <Icon size={16} name="playerPrev" />
-          </button>
-          <button className="flex w-8 h-8 md:hidden items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
-            <Icon size={30} name="heart" />
           </button>
           <button
             onClick={controls[state?.playing ? "pause" : "play"]}
-            className="w-8 h-8 bg-white flex items-center justify-center text-black rounded-full hover:scale-[1.06]"
+            className="hidden w-8 h-8 bg-white md:flex items-center justify-center text-black rounded-full hover:scale-[1.06]"
           >
             <Icon size={16} name={state?.playing ? "pause" : "play"} />
           </button>
-          <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="player-button">
             <Icon size={16} name="playerNext" />
           </button>
-          <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+          <button className="player-button">
             <Icon size={16} name="repeat" />
           </button>
         </div>
@@ -115,18 +123,18 @@ function NormalPlayer() {
         </div>
       </div>
       <div className="hidden min-w-[11.25rem] w-[30%] md:flex items-center justify-end">
-        <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+        <button className="player-button">
           <Icon size={16} name="lyrics" />
         </button>
-        <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+        <button className="player-button">
           <Icon size={16} name="queue" />
         </button>
-        <button className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+        <button className="player-button">
           <Icon size={16} name="device" />
         </button>
         <button
           onClick={controls[state.muted ? "unmute" : "mute"]}
-          className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
+          className="player-button"
         >
           <Icon size={16} name={volumeIcon} />
         </button>
@@ -142,14 +150,11 @@ function NormalPlayer() {
             }}
           />
         </div>
-        <button
-          onClick={toggle}
-          className="hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
-        >
+        <button onClick={toggle} className="player-button">
           <Icon size={16} name="fullScreen" />
         </button>
       </div>
-      <div ref={fsRef}>
+      <div className="hidden md:block" ref={fsRef}>
         {isFullscreen && (
           <FullScreenPlayer
             toggle={toggle}
@@ -163,4 +168,4 @@ function NormalPlayer() {
   );
 }
 
-export default NormalPlayer;
+export default Player;

@@ -42,7 +42,7 @@
   }
 
   .player-button {
-    @apply w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100;
+    @apply hidden w-8 h-8 md:flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100;
   }
 
   .playlist-item {

@@ -12,10 +12,10 @@ function Title({ title, more = false }) {
         <NavLink
           to={more}
           className={
-            "text-xs font-semibold uppercase text-link hover:underline tracking-wider"
+            "text-xs font-semibold text-link hover:underline tracking-wider"
           }
         >
-          See all
+          Show all
         </NavLink>
       )}
     </header>

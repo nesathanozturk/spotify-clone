@@ -38,7 +38,7 @@ function SongItem({ item }) {
     <NavLink
       key={item.id}
       to="/"
-      className={"bg-footer p-4 rounded hover:bg-active group"}
+      className={"bg-footer p-4 rounded transition-all hover:bg-active group"}
     >
       <div className="pt-[100%] relative mb-4">
         <img

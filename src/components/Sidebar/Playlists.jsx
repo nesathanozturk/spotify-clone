@@ -17,6 +17,26 @@ function Playlists() {
             React yazarken dinlenecek şarkılar
           </a>
         </li>
+        <li>
+          <a href="#" className="playlist-item mt-3 text-link">
+            Karışık
+          </a>
+        </li>
+        <li>
+          <a href="#" className="playlist-item text-link">
+            console.log
+          </a>
+        </li>
+        <li>
+          <a href="#" className="playlist-item text-link">
+            soup
+          </a>
+        </li>
+        <li>
+          <a href="#" className="playlist-item mt-2 text-link">
+            hata çıkınca dinlenmesi gereken şarkılar
+          </a>
+        </li>
       </ul>
     </nav>
   );

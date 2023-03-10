@@ -34,7 +34,7 @@ function MobileBottom() {
           </li>
           <li>
             <NavLink
-              to="/"
+              to="/collection"
               className={({ isActive }) =>
                 isActive ? "mobile-bottom-active" : "mobile-bottom-inactive"
               }
@@ -46,17 +46,15 @@ function MobileBottom() {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "mobile-bottom-active" : "mobile-bottom-inactive"
-              }
+            <a
+              href="https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580"
+              className="h-10 flex flex-col items-center gap-y-1 text-xs md:text-sm font-semibold text-link hover:text-white px-4 rounded transition-all whitespace-nowrap"
             >
               <span>
                 <Icon name="logo" />
               </span>
               Get App
-            </NavLink>
+            </a>
           </li>
         </ul>
       </nav>

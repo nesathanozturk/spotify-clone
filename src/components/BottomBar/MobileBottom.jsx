@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function MobileBottom() {
   return (
-    <div className="md:hidden bg-black rounded-lg md:bg-footer border-t border-white border-opacity-5">
+    <div className="w-full md:hidden bg-black rounded-lg md:bg-footer border-t border-white border-opacity-5">
       <nav className="p-3 md:hidden">
         <ul className="flex items-center justify-between">
           <li>

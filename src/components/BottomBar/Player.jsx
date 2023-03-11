@@ -41,7 +41,7 @@ function Player() {
   }, [state.volume, state.muted]);
 
   return (
-    <div className="bg-footer mx-1 p-2 md:mx-0 md:p-0 flex px-4 items-center gap-x-28 md:gap-x-0 h-full">
+    <div className="w-full bg-footer mx-1 p-2 md:mx-0 md:p-0 flex px-4 items-center gap-x-28 md:gap-x-0 h-full">
       <div className="w-full md:min-w-[11.25rem] md:w-[30%]">
         {current && (
           <div className="flex items-center justify-between md:justify-start">

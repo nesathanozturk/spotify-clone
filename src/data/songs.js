@@ -33,7 +33,7 @@ export default [
     id: 3,
     title: "R U Mine?",
     artist: "Arctic Monkeys",
-    description: "Artist",
+    description: "Arctic Monkeys",
     image: "https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f",
     type: "artist",
     src: areYouMine,
